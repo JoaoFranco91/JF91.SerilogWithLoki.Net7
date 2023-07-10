@@ -9,6 +9,9 @@
         <Description>Integrate Serilog into you ASP.NET Web API with Grafana Loki Sink</Description>
         <Copyright>João Franco</Copyright>
         <PackageTags>serilog,grafana,loki</PackageTags>
+        <PackageProjectUrl>https://github.com/JoaoFranco91/JF91.SerilogWithLoki.Net7</PackageProjectUrl>
+        <PackageLicenseUrl>https://opensource.org/license/bsd-3-clause/</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/JoaoFranco91/JF91.SerilogWithLoki.Net7</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
