@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JF91.SerilogWithLoki.Net7", "JF91.SerilogWithLoki.Net7\JF91.SerilogWithLoki.Net7.csproj", "{1B4FB0C8-ECCD-4CDB-804B-AD68A034F123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JF91.SerilogWithLoki", "JF91.SerilogWithLoki\JF91.SerilogWithLoki.csproj", "{435E47A2-3440-413D-82C5-0D18A9C121BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B4FB0C8-ECCD-4CDB-804B-AD68A034F123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4FB0C8-ECCD-4CDB-804B-AD68A034F123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4FB0C8-ECCD-4CDB-804B-AD68A034F123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4FB0C8-ECCD-4CDB-804B-AD68A034F123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435E47A2-3440-413D-82C5-0D18A9C121BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435E47A2-3440-413D-82C5-0D18A9C121BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435E47A2-3440-413D-82C5-0D18A9C121BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435E47A2-3440-413D-82C5-0D18A9C121BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
