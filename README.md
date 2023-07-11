@@ -12,7 +12,7 @@ Follow these steps to get it done:
 
 ### 1: Install Nuget Package
 ```
-dotnet add package JF91.SerilogWithLoki --version 1.0.0
+dotnet add package JF91.SerilogWithLoki --version 1.2.0
 ```
 
 <br>
@@ -54,7 +54,22 @@ builder.Host.ConfigureSerilog();
 
 <br>
 
-### 5 - Add this Environment Variable to your ```launchSettings.json```:
+### 5: Add this to your ```appsettings.json``` and modify it your needs:
+
+```
+"SerilogSettings": {
+    "SerilogSinks": {
+      "Console": true,
+      "Loki": true
+    },
+    "LokiSettings": {
+      "Url": "http://localhost:3100"
+    }
+}
+```
+<br>
+
+### 6 - Add this Environment Variable to your ```launchSettings.json```:
 ```
 "APPLICATION_NAME": "MyKickassApi"
 ```
