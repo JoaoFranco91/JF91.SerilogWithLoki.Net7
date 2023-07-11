@@ -10,8 +10,13 @@ using Microsoft.Extensions.Hosting;
 
 public static class SerilogExtensions
 {
+    private static SerilogSettings serilogSettings = 
+        new SerilogSettings();
+    
     public static void CreateLogger(IConfiguration config)
     {
+        config.GetSection(nameof(SerilogSettings)).Bind(serilogSettings);
+        
         Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .Enrich.FromLogContext()
@@ -23,11 +28,16 @@ public static class SerilogExtensions
             .WriteTo.Async
             (
                 wt =>
-                    wt.Console
-                    (
-                        outputTemplate: SerilogConstants.OutputTemplate,
-                        theme: AnsiConsoleTheme.Code
-                    )
+                {
+                    if (serilogSettings.SerilogSinks.Console)
+                    {
+                        wt.Console
+                        (
+                            outputTemplate: SerilogConstants.OutputTemplate,
+                            theme: AnsiConsoleTheme.Code
+                        );
+                    }
+                }
             )
             .ReadFrom.Configuration(config)
             .CreateLogger();
@@ -51,21 +61,36 @@ public static class SerilogExtensions
                     .Enrich.WithCorrelationId()
                     .Enrich.WithExceptionDetails()
                     .Enrich.WithProperty("Application", Environment.GetEnvironmentVariable("APPLICATION_NAME"))
-                    .Enrich.WithProperty("Environment", context.HostingEnvironment.EnvironmentName)
-                    .WriteTo.Async
+                    .Enrich.WithProperty("Environment", context.HostingEnvironment.EnvironmentName);
+
+                if (serilogSettings.SerilogSinks.Console)
+                {
+                    configuration.WriteTo.Async
                     (
                         wt =>
-                            wt.Console
-                            (
-                                outputTemplate: SerilogConstants.OutputTemplate,
-                                theme: AnsiConsoleTheme.Code
-                            )
-                    )
-                    .WriteTo.GrafanaLoki(
-                        uri: "http://localhost:3100",
+                        {
+                            if (serilogSettings.SerilogSinks.Console)
+                            {
+                                wt.Console
+                                (
+                                    outputTemplate: SerilogConstants.OutputTemplate,
+                                    theme: AnsiConsoleTheme.Code
+                                );
+                            }
+                        }
+                    );
+                }
+
+                if (serilogSettings.SerilogSinks.Loki)
+                {
+                    configuration.WriteTo.GrafanaLoki
+                    (
+                        uri: serilogSettings.LokiSettings.Url,
                         propertiesAsLabels: SerilogLabelProvider.PropertiesAsLabels
-                    )
-                    .ReadFrom.Configuration(context.Configuration);
+                    );
+                }
+                    
+                configuration.ReadFrom.Configuration(context.Configuration);
             }
         );
 
