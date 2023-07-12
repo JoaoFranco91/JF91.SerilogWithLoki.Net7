@@ -9,6 +9,7 @@ public class SerilogSettings
 public class LokiSettings
 {
     public string Url { get; set; } = "http://localhost:3100";
+    public string[] CustomLabels { get; set; }
 }
 
 public class SerilogSinks

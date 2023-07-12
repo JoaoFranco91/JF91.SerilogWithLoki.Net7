@@ -83,10 +83,14 @@ public static class SerilogExtensions
 
                 if (serilogSettings.SerilogSinks.Loki)
                 {
+                    var customLabels = serilogSettings.LokiSettings.CustomLabels != null
+                        ? serilogSettings.LokiSettings.CustomLabels.ToList()
+                        : new List<string>();
+                    
                     configuration.WriteTo.GrafanaLoki
                     (
                         uri: serilogSettings.LokiSettings.Url,
-                        propertiesAsLabels: SerilogLabelProvider.PropertiesAsLabels
+                        propertiesAsLabels: SerilogLabelProvider.PropertiesAsLabels.Concat(customLabels)
                     );
                 }
                     
