@@ -12,7 +12,13 @@
         <PackageProjectUrl>https://github.com/JoaoFranco91/JF91.SerilogWithLoki.Net7</PackageProjectUrl>
         <PackageLicenseUrl>https://opensource.org/license/bsd-3-clause/</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/JoaoFranco91/JF91.SerilogWithLoki.Net7</RepositoryUrl>
-        <Version>1.2</Version>
+        <Version>1.2.2</Version>
+        <PackageReleaseNotes>Version 1.2.2:
+# Added 'Account' Label
+
+Version 1.2.0:
+# Added SerilogSettings to appsettings.json
+# Serilog sinks and Loki settings are now customizable</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

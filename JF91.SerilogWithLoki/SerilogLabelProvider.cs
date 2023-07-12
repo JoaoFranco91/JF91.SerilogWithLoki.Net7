@@ -6,6 +6,7 @@ public class SerilogLabelProvider
     {
         "level", // Since 3.0.0, you need to explicitly add level if you want it!
         "Admin",
+        "Account",
         "ElapsedMilliseconds",
         "StatusCode",
         "ContentType",

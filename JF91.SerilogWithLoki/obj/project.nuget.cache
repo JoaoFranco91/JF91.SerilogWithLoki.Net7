@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PD6empMDRDLf8JWLQdLTKdYuunjCzIaaPFmEjqtolySJXhJ12OshNk93jdPJ3BPSBcxZTy3sBEf+Pe3lmUgdFw==",
+  "dgSpecHash": "GHLLp9YtvAIpupADY+kPQd8XqZFi4kHXHJ5W8zXIW8z+jySX6pJLrLFONghKbgfOBAJq7tm9ahTEyMcNjOjuyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joao\\Documents\\Projects\\JF91\\JF91.SerilogWithLoki.Net7\\JF91.SerilogWithLoki\\JF91.SerilogWithLoki.csproj",
   "expectedPackageFiles": [

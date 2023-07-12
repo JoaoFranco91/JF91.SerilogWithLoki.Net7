@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nCnooWwxKAUza64tKOx6D5NcYeMGYErkr8om8QECgL1R+N4xfoKKV/hCI8UlociIAh2/Cb+MDXyqm8IXg+FnRg==",
+  "dgSpecHash": "V6kw8qAkRJNtBaTgYw36R3dxt7WksVa8OxzMr4bbjHskaNWtlCypNqwUQMz8Y4RP11WrhEIQySbIHCa1Jxjx5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joao\\Documents\\Projects\\JF91\\JF91.SerilogWithLoki.Net7\\JF91.SerilogWithLoki.Net7\\JF91.SerilogWithLoki.Net7.csproj",
   "expectedPackageFiles": [
@@ -46,7 +46,8 @@
     "C:\\Users\\Joao\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Joao\\.nuget\\packages\\system.reflection.typeextensions\\4.7.0\\system.reflection.typeextensions.4.7.0.nupkg.sha512",
     "C:\\Users\\Joao\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\Joao\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\Joao\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\Joao\\.nuget\\packages\\jf91.serilogwithloki\\1.2.0\\jf91.serilogwithloki.1.2.0.nupkg.sha512"
   ],
   "logs": []
 }
