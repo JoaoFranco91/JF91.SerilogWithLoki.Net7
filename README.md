@@ -12,7 +12,7 @@ Follow these steps to get it done:
 
 ### 1: Install Nuget Package
 ```
-dotnet add package JF91.SerilogWithLoki --version 1.2.0
+dotnet add package JF91.SerilogWithLoki --version 1.2.2
 ```
 
 <br>
