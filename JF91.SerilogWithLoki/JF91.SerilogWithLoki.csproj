@@ -12,8 +12,12 @@
         <PackageProjectUrl>https://github.com/JoaoFranco91/JF91.SerilogWithLoki.Net7</PackageProjectUrl>
         <PackageLicenseUrl>https://opensource.org/license/bsd-3-clause/</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/JoaoFranco91/JF91.SerilogWithLoki.Net7</RepositoryUrl>
-        <Version>1.3</Version>
-        <PackageReleaseNotes>Version 1.3.0:
+        <Version>1.3.2</Version>
+        <PackageReleaseNotes>Version 1.3.2:
+Added GlobalLogContext
+Added ExceptionDetails Destructor
+
+Version 1.3.0:
 Added Custom Labels to appsettings.json
 
 Version 1.2.2:
