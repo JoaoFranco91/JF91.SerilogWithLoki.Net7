@@ -24,6 +24,17 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+        try
+        {
+            int a = 0;
+            int b = 1;
+            int c = b / a;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error Log", "Exception");
+        }
+        
         _logger.LogDebug("Debug Log");
         _logger.LogTrace("Trace Log");
         _logger.LogCritical("Critical Log");

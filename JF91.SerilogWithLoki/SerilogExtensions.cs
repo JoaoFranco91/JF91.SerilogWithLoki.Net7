@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Serilog.Exceptions.Core;
 
 namespace JF91.SerilogWithLoki;
 
@@ -20,9 +21,10 @@ public static class SerilogExtensions
         Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .Enrich.FromLogContext()
+            .Enrich.FromGlobalLogContext()
             .Enrich.WithMachineName()
             .Enrich.WithCorrelationId()
-            .Enrich.WithExceptionDetails()
+            .Enrich.WithExceptionDetails(new DestructuringOptionsBuilder().WithDefaultDestructurers())
             .Enrich.WithProperty("Application", Environment.GetEnvironmentVariable("APPLICATION_NAME"))
             .Enrich.WithProperty("Environment", Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"))
             .WriteTo.Async

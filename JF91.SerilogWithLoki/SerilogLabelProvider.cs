@@ -37,5 +37,8 @@ public class SerilogLabelProvider
         "commandText",
         "ActionId",
         "ActionName",
+        "Error",
+        "Exception",
+        "StackTrace",
     };
 }
