@@ -741,7 +741,7 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "JF91.SerilogWithLoki/1.3.0": {
+      "JF91.SerilogWithLoki/1.3.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -2087,7 +2087,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "JF91.SerilogWithLoki/1.3.0": {
+    "JF91.SerilogWithLoki/1.3.2": {
       "type": "project",
       "path": "../JF91.SerilogWithLoki/JF91.SerilogWithLoki.csproj",
       "msbuildProject": "../JF91.SerilogWithLoki/JF91.SerilogWithLoki.csproj"
@@ -2095,7 +2095,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "JF91.SerilogWithLoki >= 1.3.0",
+      "JF91.SerilogWithLoki >= 1.3.2",
       "Microsoft.AspNetCore.OpenApi >= 7.0.3",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]

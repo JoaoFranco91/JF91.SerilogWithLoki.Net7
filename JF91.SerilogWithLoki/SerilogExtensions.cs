@@ -47,7 +47,8 @@ public static class SerilogExtensions
     
     public static IHostBuilder ConfigureSerilog
     (
-        this IHostBuilder host
+        this IHostBuilder host,
+        Func<string> useGrafanaHost = null
     )
     {
         host.UseSerilog
@@ -88,10 +89,12 @@ public static class SerilogExtensions
                     var customLabels = serilogSettings.LokiSettings.CustomLabels != null
                         ? serilogSettings.LokiSettings.CustomLabels.ToList()
                         : new List<string>();
-                    
+
                     configuration.WriteTo.GrafanaLoki
                     (
-                        uri: serilogSettings.LokiSettings.Url,
+                        uri: useGrafanaHost != null 
+                            ? useGrafanaHost.Invoke()
+                            : serilogSettings.LokiSettings.Url,
                         propertiesAsLabels: SerilogLabelProvider.PropertiesAsLabels.Concat(customLabels)
                     );
                 }
