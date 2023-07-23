@@ -6,13 +6,14 @@ Notes:
 
 2 - This example is a very simple one straightforward to the point. You can add more settings to Serilog through ```appsettings.json```
 
+3 - Loki Connection String can be defined in appsettings.json or on the configure method as a lambda function
 <br>
 
 Follow these steps to get it done:
 
 ### 1: Install Nuget Package
 ```
-dotnet add package JF91.SerilogWithLoki --version 1.3.0
+dotnet add package JF91.SerilogWithLoki
 ```
 
 <br>
@@ -27,6 +28,20 @@ SerilogExtensions.CreateLogger(builder.Configuration);
 ### 3: Add this line in ```program.cs``` before ```var app = builder.Build();```
 ```
 builder.Host.ConfigureSerilog();
+```
+
+### 3.2: Customize Loki Connection String:
+```
+builder.Host.ConfigureSerilog(() => "LokiConnection");
+
+// OR
+
+builder.Host.ConfigureSerilog(() => 
+{
+    // Your code
+    
+    return "LokiConnection";
+});
 ```
 
 <br>
