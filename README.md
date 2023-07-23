@@ -12,7 +12,7 @@ Follow these steps to get it done:
 
 ### 1: Install Nuget Package
 ```
-dotnet add package JF91.SerilogWithLoki --version 1.2.2
+dotnet add package JF91.SerilogWithLoki --version 1.3.0
 ```
 
 <br>
@@ -63,7 +63,11 @@ builder.Host.ConfigureSerilog();
       "Loki": true
     },
     "LokiSettings": {
-      "Url": "http://localhost:3100"
+      "Url": "http://localhost:3100",
+      "CustomLabels": [
+        "Label1",
+        "Label2"
+      ]
     }
 }
 ```
